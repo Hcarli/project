@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Graphics
+{% endblock %}
+
+
+{% block main %}
+
+
+<head>
+    <title>Economic Growth </title>
+</head>
+<body>
+    <h2>Comparing countries</h2>
+
+    <p>In this section, using the raw data from penn world table to visualize and compare the evolution the indicators
+        from two coutries. This is an primary form of comparison of countries. </p>
+
+    <p>The indicators get to penn world table to compare are:</p>
+
+    <ul>
+        <li>Expenditure-side real GDP at chained PPPs (in mil. 2017US$)</li>
+        <li>Population (in millions)</li>
+        <li>Number of persons engaged (in millions)</li>
+        <li>Human capital index, based on years of schooling and returns to education</li>
+        <li>Capital stock at current PPPs (in mil. 2017US$)</li>
+        <li>TFP at constant national prices (2017=1)</li>
+        <li>Average depreciation rate of the capital stock</li>
+        <li>Share of gross capital formation at current PPPs</li>
+    </ul>
+
+    <p>This indicators will be transform to indicator to use in Sollow Model soon.</p>
+
+    <h2>Select two countries to compare:</h2>
+    <p></p>
+    <form action="/graphics" method="post">
+        <label for="country1">Choose the first country:</label>
+        <select id="country1" name="country1">
+            <!-- As opções serão preenchidas aqui -->
+            {% for row in countries %}
+            <option value="{{ row }}">{{ row }}</option>
+            {% endfor %}
+            <!-- Adicione mais opções conforme necessário -->
+        </select>
+        <label for="country2">Choose the second country:</label>
+        <select id="country2" name="country2">
+            <!-- As opções serão preenchidas aqui -->
+            {% for row in countries %}
+            <option value="{{ row }}">{{ row }}</option>
+            {% endfor %}
+            <!-- Adicione mais opções conforme necessário -->
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+    <p></p>
+    {{ fig1|safe }}
+    <p></p>
+    {{ fig2|safe }}
+    <p></p>
+    {{ fig3|safe }}
+    <p></p>
+    {{ fig4|safe }}
+    <p></p>
+    {{ fig5|safe }}
+    <p></p>
+    {{ fig6|safe }}
+    <p></p>
+    {{ fig7|safe }}
+    <p></p>
+    {{ fig8|safe }}
+
+
+{% endblock %}

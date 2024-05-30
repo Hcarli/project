@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sollow Model
+{% endblock %}
+
+
+{% block main %}
+
+<head>
+    <title>Solow Model</title>
+
+</head>
+<body>
+    <h1>The Solow Growth Model</h1>
+
+    <section>
+        <h2>Introduction</h2>
+        <p>The Solow Growth Model, developed by Robert Solow in 1956, is a classical model of economic growth
+            that emphasizes the role of capital accumulation, labor, and technological progress.
+            It is used to explain long-term economic growth by looking at productivity, capital accumulation,
+            population growth, and technological innovation.</p>
+    </section>
+
+    <section>
+        <h2>Assumptions of the Solow Model</h2>
+        <ul>
+            <li>The production function has constant returns to scale.</li>
+            <li>Output is a function of capital and labor, typically represented by a Cobb-Douglas production function.</li>
+            <li>Technological progress is exogenous.</li>
+            <li>The savings rate, population growth rate, and depreciation rate are constant.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Key Equations</h2>
+        <p>The core of the Solow model can be represented by the following equations:</p>
+        <p>The production function:</p>
+        <p>\[Y(t) = K(t)^\alpha [A(t)L(t)]^{1-\alpha}\]</p>
+        <p>Where:</p>
+        <ul>
+            <li>\( Y(t) \) is the total output at time \( t \).</li>
+            <li>\( K(t) \) is the capital stock at time \( t \).</li>
+            <li>\( A(t) \) is the level of technology at time \( t \).</li>
+            <li>\( L(t) \) is the labor force at time \( t \).</li>
+            <li>\( \alpha \) is the output elasticity of capital (a constant).</li>
+        </ul>
+        <p>Capital accumulation is described by:</p>
+        <p>\[\frac{dK(t)}{dt} = sY(t) - \delta K(t)\]</p>
+        <p>Where:</p>
+        <ul>
+            <li>\( s \) is the savings rate.</li>
+            <li>\( \delta \) is the depreciation rate of capital.</li>
+        </ul>
+        <p>In the steady state, the change in capital stock \( \frac{dK(t)}{dt} = 0 \), leading to:</p>
+        <p>\[sY^* = \delta K^*\]</p>
+        <p>Where \( Y^* \) and \( K^* \) are the steady-state levels of output and capital, respectively.</p>
+    </section>
+
+    <section>
+        <h2>Steady-State Solution</h2>
+        <p>At the steady state, the economy grows at a constant rate determined by technological progress and population growth. The steady-state levels of capital per worker \( k^* \) and output per worker \( y^* \) are given by:</p>
+        <p>\[k^* = \left( \frac{sA}{\delta + n} \right)^{\frac{1}{1-\alpha}}\]</p>
+        <p>\[y^* = A (k^*)^\alpha\]</p>
+        <p>Where:</p>
+        <ul>
+            <li>\( n \) is the population growth rate.</li>
+            <li>\( A \) is the level of technology (assumed to be constant in the steady state).</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Implications of the Solow Model</h2>
+        <p>The Solow model suggests that economies with higher savings rates will have higher
+            levels of capital and output per worker in the steady state.
+            However, it also implies that without technological progress, long-term growth in
+            per capita output cannot be sustained.</p>
+    </section>
+
+    <section>
+        <h2>Comparing Economic Growth of Countries Using the Solow Model</h2>
+        <p>The Solow model can be used to compare the economic growth of different countries
+            by analyzing their key economic indicators such as savings rates, population growth,
+            and technological progress. Here’s a step-by-step approach:</p>
+        <p></p>
+        <h5>Step 1: Gather Data</h5>
+        <p>Collect data on GDP, capital stock, labor force, savings rate, depreciation rate,
+            population growth rate, and technological progress for each country.</p>
+        <p></p>
+        <h5>Step 2: Calculate Key Variables</h5>
+        <p>Compute output per worker (\( y \)) and capital per worker (\( k \)) for each country.
+            Determine the steady-state levels of these variables using the formulas:</p>
+        <p>\[k^* = \left( \frac{sA}{\delta + n} \right)^{\frac{1}{1-\alpha}}\]</p>
+        <p>\[y^* = A (k^*)^\alpha\]</p>
+        <p></p>
+        <h5>Step 3: Analyze Steady-State Predictions</h5>
+        <p>Compare the steady-state predictions of output per worker and capital per worker
+            across countries. This comparison helps in understanding the potential long-term economic
+            positions of the countries.</p>
+        <p></p>
+        <h5>Step 4: Evaluate Convergence</h5>
+        <p>Examine whether poorer countries are growing faster than richer ones, as predicted
+            by the conditional convergence hypothesis.</p>
+        <p></p>
+        <h5>Step 5: Perform Empirical Analysis</h5>
+        <p>Conduct regression analysis with GDP growth rates and other key indicators to
+            empirically test the predictions of the Solow model.</p>
+        <p>This approach helps in understanding the underlying factors driving economic growth
+            and provides a framework for comparing the growth trajectories of different countries.</p>
+    </section>
+
+    <footer>
+        <p>For further reading, see Robert Solow's original paper "A Contribution to the Theory of Economic Growth" (1956).</p>
+    </footer>
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<h1> Wellcome! </h1>
+<h5 style="text-align: center;">If you don't have a login yet, please enter in registration form, clicking <a href="/register">here</a></h5>
+<h6 style="text-align: center;">Enter you login and password</h6>
+<hr>
+
+    <form action="/login" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Log In</button>
+    </form>
+    <hr>
+
+
+{% endblock %}
+
+
