@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Economic Growth
+{% endblock %}
+
+
+{% block main %}
+
+
+<head>
+    <title>Analysis </title>
+</head>
+<body>
+
+    <h2>Analisys of Sollow Model</h2>
+
+
+    <form action="/analysis" method="post">
+        <label for="year">Choose a year:</label>
+        <select id="year" name="year">
+            {% for row in year %}
+            <option value="{{ row }}">{{ row }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <div class="container mt-5">
+        <h3 class="mb-4">Economic growth data</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>country</th>
+                    <th>year</th>
+                    <th>\[k^*\]</th>
+                    <th>\[y^*\]</th>
+                 </tr>
+            </thead>
+            <tbody>
+                {% for row in sollow %}
+                    <tr>
+                        <td>{{ row.country }}</td>
+                        <td>{{ row.year }}</td>
+                        <td>{{ row.k_star }}</td>
+                        <td>{{ row.y_star }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- Adicione os scripts do Bootstrap (jQuery e Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+
+{% endblock %}
